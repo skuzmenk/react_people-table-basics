@@ -1,12 +1,6 @@
 import './App.scss';
 import React from 'react';
-import {
-  Routes,
-  Route,
-  Navigate,
-  Link,
-  useLocation,
-} from 'react-router-dom';
+import { Routes, Route, Navigate, Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 
 import { HomePage } from './pages/HomePage';
@@ -29,8 +23,7 @@ export const App = () => {
             <Link
               to="/"
               className={classNames('navbar-item', {
-                'has-background-grey-lighter':
-                  location.pathname === '/',
+                'has-background-grey-lighter': location.pathname === '/',
               })}
             >
               Home
@@ -58,10 +51,7 @@ export const App = () => {
 
             <Route path="/people" element={<PeoplePage />} />
 
-            <Route
-              path="/people/:slug"
-              element={<PeoplePage />}
-            />
+            <Route path="/people/:slug" element={<PeoplePage />} />
 
             <Route path="*" element={<PageNotFound />} />
           </Routes>
